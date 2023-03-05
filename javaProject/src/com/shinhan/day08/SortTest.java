@@ -19,8 +19,6 @@ public class SortTest {
 		print(arr);
 	}
 
-
-
 	private static void print(Car car[]) {
 		for(Car c : car) {
 			System.out.println(c);
@@ -28,13 +26,14 @@ public class SortTest {
 	}
 
 
+	
 
 	// 분류 
 	private static void f3() {
 		Money[] arr = {new Money(10), new Money(5), new Money(7), new Money(1), new Money(3) };
 		System.out.println("sort하기 전: " + Arrays.toString(arr));
 		
-		Arrays.sort(arr); // **Comparable 란 인터페이스를 구현하지 않으면 수행불가.
+		Arrays.sort(arr); // **(Money 객체를 생성한 것이므로 Money 클래스에) Comparable 란 인터페이스를 구현하지 않으면 수행불가.
 		                  // **왜냐면 (1)뭘 비교하고 : amount를 비교 
 		                  //         (2)어떻게 비교할지 : amount - this.amount (작은 놈이 알아서 앞으로 오게 분류된다)
 		                  // 에 대한 내용이 전혀 설정이 안돼있기 때문에. 
@@ -56,7 +55,13 @@ public class SortTest {
 			
 		});
 		
+		System.out.println("익명객체 이용하여 Desc으로 재정의한 경우: " + Arrays.toString(arr));
+		
 	}
+	
+	
+	
+	
 
 	private static void f2() {
 		

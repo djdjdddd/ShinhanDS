@@ -11,7 +11,7 @@ public class Gun {
 		
 		Scanner sc = new Scanner(System.in);
 		int testCase = sc.nextInt();
-		
+		 
 		for(int k=0; k<testCase; k++) {
 			int row = sc.nextInt();
 			int col = sc.nextInt();
@@ -19,11 +19,12 @@ public class Gun {
 			for(int i=0; i<row; i++){
 				for(int j=0; j<col; j++){
 					arr[i][j] = sc.next().charAt(0);
-					//System.out.print(arr[i][j]);
+					//System.out.print(arr[i][+j]);
 				}
 				//System.out.println();
 			}
 			//구현하시오.
+			
 			
 			System.out.println("#" + k + ":" + AnswerN);
 		}
