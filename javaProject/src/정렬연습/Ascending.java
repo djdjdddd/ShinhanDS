@@ -15,7 +15,7 @@ public class Ascending {
 	private static void f4() {
 		Integer[] array = new Integer[] {1,3,45,183,2154,5645623};
 
-		Arrays.sort(array, (i1, i2) -> i2 - i1);
+		Arrays.sort(array, (i1, i2) -> i2 - i1); // 이게 람다표현식인가??
 		
 		System.out.println(Arrays.toString(array));
 	}
