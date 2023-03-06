@@ -15,8 +15,9 @@ public class MyThread3 extends Object implements Runnable{ // (1)
 	
 	public MyThread3() {}
 	
-	public MyThread3(String name) {
-		Thread.currentThread().setName(name); // 얘는 getName이 아닌 setName을 통해 쓰레드의 이름을 설정해주는 메소드를 부른 것.
-	}
+	// **(정정) 생성자가 필요한 게 아니라
+//	public MyThread3(String name) {
+//		Thread.currentThread().setName(name); // 얘는 getName이 아닌 setName을 통해 쓰레드의 이름을 설정해주는 메소드를 부른 것.
+//	}
 	
 }
