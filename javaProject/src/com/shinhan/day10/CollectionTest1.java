@@ -14,7 +14,7 @@ import java.util.*;
 public class CollectionTest1 {
 
 	public static void main(String[] args) throws IOException {
-		f9();
+		f7();
 	}
 
 	
