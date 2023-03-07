@@ -1,6 +1,19 @@
 package com.shinhan.day04;
 
-public class Employee {
+import java.util.Objects;
+
+public class Employee implements Comparable<Employee>{
+	
+	@Override
+	public int compareTo(Employee o) {
+		int result = name.compareTo(o.name); // name은 문자열이니까 comparTo() 를 이용
+									   // int라면 o1 - o2 로 나타내면 ok. 
+		if(name.equals(o.name)) {
+			result = title.compareTo(o.title);
+		}
+		return result;
+	}
+	
 	
 	// 필드 (private, 외부에서 접근 못하게 막아놓은 상태)
 	private String name;
@@ -47,5 +60,34 @@ public class Employee {
 				+ totalSalary
 				+ " 원입니다.");
 	}
+
+
+	@Override
+	public String toString() {
+		return "Employee [name=" + name + ", title=" + title + ", baseSalary=" + baseSalary + ", totalSalary="
+				+ totalSalary + "]";
+	}
+
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(name, title);
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Employee other = (Employee) obj;
+		return Objects.equals(name, other.name) && Objects.equals(title, other.title);
+	}
+
+
+	
 
 }

@@ -1,7 +1,21 @@
 package com.shinhan.day09;
 
 //부모class로 사용할 예정
-public class Account{
+public class Account implements Comparable<Account>{
+	
+	@Override
+	public int compareTo(Account acc) {
+		
+		if(this.equals(acc)) return 0;
+		
+		int result = acc.balance - balance;
+		
+		if(result == 0) {
+			return owner.compareTo(acc.owner) * -1;
+		}
+		return result;
+	}
+	
 	//1.field
 	private String accNo;
 	private String owner;
@@ -47,4 +61,11 @@ public class Account{
 	public void setBalance(int balance) {
 		this.balance = balance;
 	}
+	
+
+	
+	
+	
+	
+	
 }

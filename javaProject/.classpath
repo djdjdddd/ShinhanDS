@@ -6,7 +6,7 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/eclipse-workspace/lombok.jar">
+	<classpathentry kind="lib" path="C:/Users/fzaca/Downloads/lombok.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
