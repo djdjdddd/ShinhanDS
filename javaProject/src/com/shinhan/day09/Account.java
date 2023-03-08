@@ -1,6 +1,9 @@
 package com.shinhan.day09;
 
+import lombok.Data;
+
 //부모class로 사용할 예정
+@Data
 public class Account implements Comparable<Account>{
 	
 	@Override
@@ -29,6 +32,9 @@ public class Account implements Comparable<Account>{
 		this.accNo = accNo;
 		this.owner = owner;
 		this.balance = balance;
+	}
+	public Account(String no, String owner2) {
+		// TODO Auto-generated constructor stub
 	}
 	//메서드
 	public void deposit(int amount) {
