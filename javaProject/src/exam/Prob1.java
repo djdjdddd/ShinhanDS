@@ -21,15 +21,21 @@ public class Prob1 implements Comparable<String>{
 		
 		int score = 0;
 		
-		for(int i=0; i<array.length; i++) {
-			String str = array[i];
-			char ch1 = str.charAt(3);
-			char ch2 = str.charAt(4);
-			score = (int)ch1 + (int)ch2;
+		String word = "";
+		
+		for(int j=0; j<array.length; j++) {
 			
-		
-		}System.out.println(score);
-		
+			for(int i=0; i<array.length; i++) {
+				char ch = str.charAt(i);
+				
+				if(Character.isDigit(ch)) {
+					word += ch;
+				}
+				
+				
+			}
+		}
+		System.out.println(word);
 		
 		
 		
