@@ -12,6 +12,10 @@ public class Student implements Comparable<Student>{
 	private String name;
 	private int score;
 	
+	public Student(String string, int i) {
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
